@@ -1,0 +1,1459 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HTML6 (HTML5 y CSS3)</title>
+	<link rel="stylesheet" href="css/estilo2.css" type="text/css"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Curso completo 2019 desde cero, en español y en abierto de HTML5, CSS3 y javaScript (ECMAScript 6+)"/>
+	<style type="text/css"></style>
+	<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link href="js/jqueryui-custom.min.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		var x=$("document");
+		x.ready(inicio);
+
+		function inicio(){
+			$(".pps").click(mover);
+			$(".arribal").click(scroll_al_principio);
+			$(".arribal").css("cursor","pointer");
+		}
+		function mover(){
+			var b=String($(this).attr("id")).substr(1,3);
+			escrol("#punto"+b);
+		}
+		function scroll_al_principio(){			
+			if (self.pageYOffset>145){
+				if (self.pageYOffset<2790){
+					$("html, body").animate({scrollTop:"145px"},900,"easeOutBounce");
+				} else {
+					$("html, body").animate({scrollTop:"145px"},650,"easeOutCirc");
+				}
+			}
+		}
+		function escrol(objeto){
+			var posicion_boton=$(objeto).offset().top;
+			/* Para ir a la posición vertical de un elemento con su id
+			$("html, body").animate({
+					scrollTop:$('#punto27').position().top},
+					1200,"easeOutCirc");
+			}*/
+				var hasta=posicion_boton;
+				$("html,body").animate({
+					scrollTop:hasta},
+					900,"easeOutCirc");
+			}
+	</script>
+</head>
+
+<body>
+<div id="franja_negra">
+	<div class="caja_flex_justify">
+	<div id="busqueda">
+	   	<span id="txt_buscar">Buscar: </span><input type="text" size="26" id="autoc1" placeholder="Escribe un término y pulsa Enter" title="Busca un tema escribiendo una palabra clave y pulsando ENTER"/>
+	</div>
+	<div id="foto">
+		<a href="https://www.youtube.com/channel/UC-BnvAuHbsJ3DTslnwt1J1Q/videos" target="_blank"><img src="img_html/micanalyoutube.png"></a>
+	</div>	
+	</div>
+</div>
+
+<header>
+<div id="cabecera">
+	<div id="logo_header">
+		<img src="img_html/logo_html6_es.png">
+	</div>
+	<div id="autor">
+		<div id="titular"><h1>HTML5 y CSS3</h1></div>
+		<div id="nombres"><span id="nombres1">Profesores:</span><span id="nombres2"> JAB &nbsp;&nbsp; Ester Torres</span></div>
+	</div>
+</div>
+</header>
+<div id="indice2">
+<div id="indice">
+<div id="titulo_indice_contenido"><img src="img_html/indice_cortado.png" width="100px"></div>
+<div id="lista">
+	<div class="linea"><li><a id="p1" class="pps" href="#">Tema 1: Estructura semántica de HTML5</a></li></div>
+  	<div class="linea"><li><a id="p2" class="pps" href="#">Tema 2: Etiquetas básicas</a></li></div>
+	<div class="linea"><li><a id="p3" class="pps" href="#">Tema 3: Imágenes, listas y enlaces</a></li></div>
+	<div class="linea"><li><a id="p4" class="pps" href="#">Tema 4: Introducción a CSS</a></li></div>
+	<div class="linea"><li><a id="p5" class="pps" href="#">Tema 5: Las propiedades CSS más utilizadas</a></li></div>
+	<div class="linea"><li><a id="p6" class="pps" href="#">Tema 6: Creación de un favicon</a></li></div>
+	<div class="linea"><li><a id="p7" class="pps" href="#">Tema 7: Bordes redondeados</a></li></div>
+  	<div class="linea"><li><a id="p88" class="pps" href="#">Tema 8: Sombras</a></li></div>
+	<div class="linea"><li><a id="p9" class="pps" href="#">Tema 9: Imágenes de fondo</a></li></div>
+	<div class="linea"><li><a id="p10" class="pps" href="#">Tema 10: Tipografías</a></li></div>
+	<div class="linea"><li><a id="p11" class="pps" href="#">Tema 11: Cajas flotantes (float)</a></li></div>
+	<div class="linea"><li><a id="p12" class="pps" href="#">Tema 12: Centrar el contenido</a></li></div>
+	<div class="linea"><li><a id="p121" class="pps" href="#">Tema 13: Flex, sin dolor</a></li></div>
+	<div class="linea"><li><a id="p13" class="pps" href="#">Tema 14: Posición de los elementos (position)</a></li></div>
+	<div class="linea"><li><a id="p14" class="pps" href="#">Tema 15: Transformaciones (transform)</a></li></div>
+  	<div class="linea"><li><a id="p15" class="pps" href="#">Tema 16: Formularios</a></li></div>
+	<div class="linea"><li><a id="p16" class="pps" href="#">Tema 17: iframe</a></li></div>
+	<div class="linea"><li><a id="p17" class="pps" href="#">Tema 18: Transiciones (transition)</a></li></div>
+	<div class="linea"><li><a id="p19" class="pps" href="#">Tema 19: Columnas de texto</a></div>
+	<div class="linea"><li><a id="p20" class="pps" href="#">Tema 20: Vídeo</a></li></div>
+	<div class="linea"><li><a id="p21" class="pps" href="#">Tema 21: Audio</a></li></div>
+	<div class="linea"><li><a id="p22" class="pps" href="#">Tema 22: Transparencias y degradados</a></div>
+	<div class="linea"><li><a id="p23" class="pps" href="#">Tema 23: Animaciones (animation)</a></li></div>
+	<div class="linea"><li><a id="p24" class="pps" href="#">Tema 24: SVG (gráficos vectoriales)</a></li></div>
+	<div class="linea"><li><a id="p25" class="pps" href="#">Tema 25: Canvas</a></li></div>
+	<div class="linea"><li><a id="p26" class="pps" href="#">Tema 26: Adaptación a móviles (mediaqueries)</a></li></div>
+	<div class="linea"><li><a id="p27" class="pps" href="#">Tema 27: Contenido editable</a></li></div>
+	<div class="linea"><li><a id="p18" class="pps" href="#">Tema 28: Storage</a></li></div>
+</div>
+</div></div>
+
+
+<section id="contingut">
+<div class="bloque" id="punto1">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 1: Estructura semántica de HTML5</h2>
+</div>
+
+<div class="explicacion">
+Se tratan los nuevos &lt;divs&gt; o cajas de HTML5 que aportan un significado propio a su contenido:
+(<span class="azul negrita">&lt;main&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;figure&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt; o &lt;footer&gt;</span> entre otras).
+</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<a href="t1_estructura.html">
+		<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenido</b></div>
+	</a>
+</div>
+<div class="cuadro">
+	<a href="ac1.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+<div class="cuadro">
+	<a href="autoevaluacion1.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo"><b>Autoevaluación</b></div>
+	</a>
+</div>
+<div class="cuadro">
+	<a href="ex1.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto2">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 2: Etiquetas básicas: párrafos, líneas y encabezados</h2>
+</div>
+<div class="explicacion">
+Vamos a ver las etiquetas más básicas, pero fundamentales para separar párrafos (<span class="azul negrita">&lt;p&gt;</span>), crear saltos de línea (<span class="azul negrita">&lt;br&gt;</span>), crear negritas (<span class="azul negrita">&lt;b&gt;</span>), cursivas (<span class="azul negrita">&lt;i&gt;</span>), señalar encabezados (<span class="azul negrita">&lt;h1&gt;-&lt;h6&gt;</span>),  y colocar sangrías (<span class="azul negrita">&lt;dd&gt;</span>).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<a href="t1_2_conceptos.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenido</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+	<a href="ac2.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+	<a href="autoevaluacion2.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+	<a href="ex2.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+
+
+
+
+<div class="bloque" id="punto3">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 3: Imágenes, listas y enlaces</h2>
+</div>
+
+<div class="explicacion">
+En este apartado se tratan todos aquellos aspectos fundamentales para la creación de listas ordenadas (<span class="azul negrita">&lt;ol&gt;</span>) y desordenadas (<span class="azul negrita">&lt;ul&gt;</span>), personalización de las viñetas, vinculación de imágenes (<span class="azul negrita">&lt;img&gt;</span>) y la utilización de enlaces (<span class="azul negrita">&lt;a&gt;</span>), tanto en formato texto como con imágenes. Asimismo, vamos a ver un resumen de propiedades y selectores propios para poder dar formato CSS a los enlaces (quitar subrayado, configurar colores, cambiar el color al pasar el cursor por encima).</div>
+
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<a href="t1_4_imagenes.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Imágenes</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+	<a href="ac3.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+	<a href="autoevaluacion3.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+	<a href="ex3.html">	
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+</article>
+
+
+
+
+<div class="bloque" id="punto3_listas">
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t1_3_listas.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Listas</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac4.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion4.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex4.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+<div class="bloque" id="punto3_enlaces">
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t1_5_enlaces.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Enlaces</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac5.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion5.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex5.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+ 
+
+
+
+
+<div class="bloque" id="punto4"><div id="titulillo"><div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 4: Introducción a CSS</h2>
+</div>
+
+
+<div class="explicacion">
+Vamos a empezar a introducir código CSS para poder maquetar cualquier elemento que introduzcamos, tanto desde dentro del propio documento HTML, como -sobre todo- a través de ficheros CSS externos.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<a href="t7_intro_css.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenido</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac6.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+	<a href="autoevaluacion6.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+</a>
+
+
+<div class="cuadro">
+	<a href="ex6.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+</article>
+</div>
+
+
+<div class="bloque" id="punto5">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 5: Las propiedades CSS más utilizadas</h2>
+</div><div class="explicacion">
+En este extenso tema vamos a tratar las sentencias, propiedades, valores y selectores CSS más habituales y utilizados para la maquetación de texto, disposición de cajas (<span class="azul negrita">&lt;divs&gt;</span>) y personalización de enlaces.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t3_2_propiedades.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenido</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac7.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 1</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+<a href="autoevaluacion7.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+<a href="ex7.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 1</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro">
+<a href="ac8.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 2</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro">
+	<a href="ex8.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 2</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+
+<div class="bloque" id="punto6">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 6: Creación de un favicon</h2>
+</div><div class="explicacion">
+Para dejar un buen sabor de boca de este primer módulo de iniciación vamos a crear un <span class="azul negrita">favicon</span>, es decir un icono que aparece al lado del nombre de nuestro dominio, tanto en la pestaña del navegador, como en el resumen de nuestra página en el resultado de búsqueda de los diferentes buscadores (google, bing, yahoo..).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="tv_favicon.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenido</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+<a href="ac7_bis.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro_vacio">
+</div>
+
+<div class="cuadro_vacio">
+</div>
+
+</article>
+</div>
+
+
+
+
+<div class="bloque" id="punto7">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 7: Bordes redondeados(CSS3)</h2>
+</div>
+<div class="explicacion">
+Entramos en las nuevas funcionalidades de CSS3 con una propiedad que sirve para configurar bordes redondeados (<span class="azul negrita">border-radius</span>), ya sea en las 4 esquinas a la vez o concretando cada una de ellas por separado y todo con una sola línea de código.
+</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<a href="t11_bordes.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Bordes redondeados</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+	<a href="ac9.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion9.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex9.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+<div class="bloque" id="punto88">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 8: Sombras (CSS3)</h2>
+</div>
+<div class="explicacion">
+Con (<span class="azul negrita">box-shadow</span>) podemos crear sombras en cajas (<span class="azul negrita">&lt;div&gt;</span>), o sombras en textos (<span class="azul negrita">text-shadow</span>), todo con una sola línea de código.
+</div>
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t13_sombras.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Sombras</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+<a href="ac10.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion10.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+	<a href="ex10.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto9">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 9: Fondos</h2>
+</div>
+<div class="explicacion">
+En este apartado vamos a tratar varias de las mejoras sobre fondos (<span class="azul negrita">background</span>), centrados en la posibilidad de añadir diferentes imágenes superpuestas (como las capas de Photoshop) para formar un fondo de la página o de un &lt;div&gt;. Al mismo tiempo, vamos a utilizar varias propiedades para configurar la repetición (<span class="azul negrita">background-repeat</span>), tamaño (<span class="azul negrita">background-size</span>), fijación (<span class="azul negrita">background-attachment</span>) y/o posición de los mismos (<span class="azul negrita">background-position</span>).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t12_fondos.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+	</a>
+</div>
+
+
+
+<div class="cuadro">
+<a href="ac11.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+	<a href="autoevaluacion11.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex11.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+
+</article>
+</div>
+
+
+
+
+<div class="bloque" id="punto10">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 10: Tipografías</h2>
+</div><div class="explicacion">
+Podemos utilizar cualquier tipografía (ttf, otf) en nuestros proyectos web sin que el usuario la tenga que tener instalada para que pueda visualizarla. En este caso vamos a utilizar varias fuentes de GoogleFonts y las vincularemos a nuestros selectores CSS (<span class="azul negrita">@font-face</span>).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t10_fuentes.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac12.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion12.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex12.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+</article>
+</div>
+
+
+
+
+
+
+<div class="bloque" id="punto11">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 11: Cajas flotantes (float)</h2>
+</div><div class="explicacion">
+En este apartado vamos a ver cómo podemos colocar cajas (<span class="azul negrita">&lt;divs&gt;</span>) en la misma línea, alineándolas a la derecha o a la izquierda utilizando la entrañable propiedad CSS <span class="azul negrita">float</span>, así como su complemento "arreglador de desastres" <span class="azul negrita">clear</span>.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="tf_float.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac13.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="autoevaluacion13.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ex13.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+	</a>
+</div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto12">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 12: Centrar el contenido</h2>
+</div><div class="explicacion">
+Por "centrar el contenido" entendemos tanto la sencillez de centrar el contenido de una caja &lt;div&gt; (<span class="azul negrita">text-align</span>), como el hecho de centrar cajas (&lt;div&gt:) respecto a la anchura de la ventana del navegador, o bien cuando estas cajas han sido alineadas con <span class="azul negrita">float</span> o <span class="azul negrita">flex</span>.</div>
+
+<article class="dos_columnas">
+
+	<div class="cuadro">
+		<a href="tc_centrado.html">
+		<img src="img_html/palet2.png">
+		<div class="titulo"><b>Contenidos</b></div>
+		</a>
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="ac14.html">
+		<img src="img_html/palet3.png">
+		<div class="titulo"><b>Actividad</b></div>
+		</a>
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="autoevaluacion14.html">
+		<img src="img_html/palet1.png">
+		<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+		</a>
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="ex14.html">
+		<img src="img_html/palet4.png">
+		<div class="titulo"><b>Solucionador</b></div>
+		</a>
+	</div>
+</article>
+</div>
+
+
+
+
+<div class="bloque" id="punto121">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 13: Flex, sin dolor</h2>
+<span style="color:silver;font-size:21px">  &nbsp;</span>
+</div><div class="explicacion">
+La enorme importancia y la facilidad del uso de <span class="azul negrita">Flex</span> deja atrás la utilización de <span class="azul negrita">float</span>, <span class="azul negrita">inline-block</span> u otros métodos, solventado sus problemáticas habituales para distribuir con efectividad el contenido en pantalla, así como aporta nuevas funcionalidades imposibles de afrontar hasta ahora. Al mismo tiempo aporta una flexibilidad básica para el diseño preparado para múltiples dispositivos (Responsive Design).</div>
+<article class="dos_columnas">
+	<div class="cuadro">
+	<a href="flex.html">
+		<img src="img_html/palet2.png">
+		<div class="titulo"><b>Contenidos</b></div>
+		</a>
+	</div>
+	<div class="cuadro_vacio">
+	</div>
+	<div class="cuadro_vacio">
+	</div>
+	<div class="cuadro_vacio">
+	</div>
+</article>
+</div>
+
+
+
+<div class="bloque" id="punto13">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 14: Posicionamiento (position)</h2>
+</div>
+<div class="explicacion">
+Un tema básico es el posicionamiento de cajas (<span class="azul negrita">position</span>) ya sea con un posicionamiento relativo, absoluto o fijo (<span class="azul negrita">relative, absolute</span> o <span class="azul negrita">fixed</SPAN>) sin que todo el contenido se desmonte a la primera de cambio. Así como el imperativo de su utilización para el funcionamiento de propiedades como <span class="azul negrita">left, right, top</span> o <span class="azul negrita">bottom</span>.
+</div>
+
+
+<article class="dos_columnas">
+	
+	<div class="cuadro">
+	<a href="tc_posicionamiento.html">
+		<img src="img_html/palet2.png">
+		<div class="titulo"><b>Contenidos</b></div>
+		</a>
+	</div>
+
+
+	<div class="cuadro">
+		<a href="ac15.html">
+		<img src="img_html/palet3.png">
+		<div class="titulo"><b>Actividad 1</b></div>
+		</a>
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="autoevaluacion15.html">
+		<img src="img_html/palet1.png">
+		<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+		</a>
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="ex15.html">
+		<img src="img_html/palet4.png">
+		<div class="titulo"><b>Solucionador 1</b></div>
+		</a>
+	</div>
+	
+	
+
+	<div class="cuadro_vacio">
+	</div>
+
+
+	<div class="cuadro">
+		<a href="ac16.html">
+		<img src="img_html/palet3.png">
+		<div class="titulo"><b>Actividad 2</b></div>
+		</a>
+	</div>
+	
+
+	<div class="cuadro_vacio">
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="ex16.html">
+		<img src="img_html/palet4.png">
+		<div class="titulo"><b>Solucionador 2</b></div>
+	</a></div>
+	
+
+	<div class="cuadro_vacio">
+	</div>
+
+	
+	<div class="cuadro"><a href="ac17.html">
+		<img src="img_html/palet3.png">
+		<div class="titulo"><b>Actividad 3</b></div>
+	</a></div>
+	
+
+	<div class="cuadro_vacio">
+	</div>
+
+	
+	<div class="cuadro">
+	<a href="ex17.html">
+		<img src="img_html/palet4.png">
+		<div class="titulo"><b>Solucionador 3</b></div>
+		</a>
+	</div>
+	
+</article>
+</div>
+
+
+
+
+
+
+<div class="bloque" id="punto14">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 15: Transformaciones (transform)</h2>
+</div><div class="explicacion">
+Vamos a ver todas las posibilidades que aporta esta propiedad de CSS3, como son el desplazamiento (<span class="azul negrita">translate</span>), la rotación (<span class="azul negrita">rotation</span>), el cambio de escala (<span class="azul negrita">scale</span>) o la deformación (<span class="azul negrita">skew</span>).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+<a href="t14_transformaciones.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+	</a>
+</div>
+
+
+<div class="cuadro">
+<a href="ac18.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a>
+	</div>
+
+
+<div class="cuadro"><a href="autoevaluacion18.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex18.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+<div class="bloque" id="punto15">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 16: Formularios</h2>
+</div>
+<div class="explicacion">
+Los formularios de HTML5 (<span class="azul negrita">&lt;form&gt;</span>) incorporan nuevos tipos de datos (<span class="azul negrita">&lt;input<&gt;</span>) (fechas, colores, direcciones de correo electrónico, rangos, etc..) y la autovalidación de datos sin javaScript. Al mismo tiempo vamos a ver todas las propiedades y eventos CSS3 (como <span class="azul negrita">[required]</span> o <span class="azul negrita">:invalid</span>) que permiten configurar cualquier elemento o respuesta de autovalidación de un formulario.</div>
+</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t9_formularios.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+
+<div class="cuadro"><a href="ac19.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 1</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion19.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex19.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 1</b></div>
+</a></div>
+
+
+
+<div class="cuadro_vacio">
+</div>
+
+
+
+<div class="cuadro"><a href="ac20.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 2</b></div>
+</a></div>
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro"><a href="ex20.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 2</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+
+
+
+<div class="bloque" id="punto16">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 17: Google Maps (&lt;iframe&gt;)</h2>
+</div>
+<div class="explicacion">
+En este tema vamos a incorporar un mapa procedente de Google Maps, configurándolo al tamaño que necesitemos con el código que nos proporciona Google y la etiqueta <span class="azul negrita">&lt;iframe&gt;</span>, también utilizada para -entre otros usos- la vinculación de vídeos de YouTube.</div>
+
+<article class="dos_columnas">
+<div class="cuadro">
+<a href="tg_iframe.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+
+<div class="cuadro"><a href="ac21.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro"><a href="ex21.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+
+
+<div class="bloque" id="punto17">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 18: Transiciones (transition)</h2>
+</div><div class="explicacion">
+Ligado a las transformaciones (<span class="azul negrita">transform</span>) de temas anteriores, en este vamos a diseccionar las transiciones (<span class="azul negrita">transition</span>), que permiten la creación de "pequeñas animaciones" que se reproducen cuando el usuario coloca el cursor encima del mismo elemento.</div>
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t15_transiciones.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac22.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion22.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex22.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto19">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 19: Columnas de texto</h2>
+</div><div class="explicacion">
+Vamos a ver la enorme facilidad que representa dividir un texto en diferentes columnas (<span class="azul negrita">column-count</span>), fijar la línea separadora (<span class="azul negrita">column-rule</span>) o el espacio mínimo existente entre las columnas (<span class="azul negrita">column-gap</span>).</div>
+<article class="dos_columnas">
+
+
+
+<div class="cuadro"><a href="t17_columnas.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac23.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion21.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex23.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto20">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 20: Vídeo</h2>
+</div>
+<div class="explicacion">
+En este tema incorporaremos vídeos (<span class="azul negrita">&lt;video&gt;</span>) sin necesidad de plugins externos. Incluiremos vídeos que se encuentren en nuestro dominio con los formatos correctos, así como vinculaciones a vídeos de YouTube utilizando el código que Google nos proporciona y la ayuda de <span class="azul negrita">&lt;iframe&gt;</span>.</div>
+
+<article class="dos_columnas">
+
+
+<div class="cuadro">
+<a href="t3_video.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac24.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion24.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex24.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto21">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 21: Audio</h2>
+</div><div class="explicacion">
+En este tema incorporaremos audios (<span class="azul negrita">&lt;audio&gt;</span>) sin necesidad de plugins externos. A modo de práctica incluiremos un fichero de audio con los formatos correctos.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t4_audio.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro"><a href="autoevaluacion26.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+<div class="cuadro_vacio">
+</div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto22">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 22: Colores, transparencias y degradados</h2>
+</div>
+<div class="explicacion">
+En este tema trataremos las últimas características relacionadas con los colores, como aquellos a los que se les puede llamar por su nombre (<span class="azul negrita">olive,chocolate, beige, orange</span>). También veremos cómo definir la opacidad (<span class="azul negrita">opacity</span>) (o transparencia) en la definición de colores, así como la utilización de colores a través de su RGB con la inclusión de la cantidad de alpha (<span class="azul negrita">rgba</span>). Sin olvidarnos de los degradados a través de código CSS3.</div>
+</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t18_colores.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac24bis.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion28.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex24bis.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+
+<div class="bloque" id="punto23">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 23: Animaciones (animation)</h2>
+</div><div class="explicacion">
+Muy parecidas a las transiciones (<span class="azul negrita">transition</span>) del módulo anterior, vamos a ver la funcionalidad y las diferencias que existen entre las transiciones y las animaciones (<span class="azul negrita">animation</span>), entre las que se pueden resaltar una mayor posibilidad en la definición de movimientos, la visualización sin intervención del usuario (al entrar en la página), fijar un retardo en el inicio o la reproducción indefinida de la animación (loop). </div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t16_animaciones.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac25pre.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 1</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion25.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex25pre.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 1</b></div>
+</a></div>
+</article>
+
+
+
+
+<article class="dos_columnas">
+<div class="cuadro_vacio"></div>
+
+
+<div class="cuadro"><a href="ac25.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad 2</b></div>
+</a></div>
+
+<div class="cuadro_vacio"></div>
+
+
+<div class="cuadro"><a href="ex25.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador 2</b></div>
+</a></div>
+</article>
+</div>
+
+
+
+
+
+<div class="bloque" id="punto24">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 24: Imágenes vectoriales SVG</h2>
+</div>
+<div class="explicacion">
+CSS3 incorpora la posibilidad de que a través de código el navegador pueda dibujar (y mostrar) imágenes vectoriales en pantalla a tiempo real. En este tema vamos a ver cómo funciona y con qué etiquetas contamos para dibujar nuestras propias obras de arte.</div>
+</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t6_svg.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+<div class="cuadro_vacio"></div>
+
+
+<div class="cuadro"><a href="autoevaluacion29.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+<div class="cuadro_vacio"></div>
+</article>
+</div>
+
+
+
+
+<div class="bloque" id="punto25">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 25: Canvas</h2>
+</div>
+<div class="explicacion">
+Canvas es otra de las <b>grandes</b> incorporaciones de CSS3. Su enorme potencial, amplitud de funciones y su asociación con javaScript para lograr todo aquello que podría resultar imposible, lo aleja un poco de la trayectoria de este curso. No obstante, en este tema vamos a ver cómo funciona a nivel general.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos <br>(en proceso)</b></div>
+</div>
+
+<div class="cuadro_vacio"></div>
+
+
+<div class="cuadro">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación<br>(en proceso)</b></div>
+</div>
+
+<div class="cuadro_vacio"></div>
+</article>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="bloque" id="punto26">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 26: Responsive Design (mediaqueries)</h2>
+</div><div class="explicacion">
+Aunque este tema de adaptación del contenido (no sólo a móviles, sino a cualquier dispositivo existente) merecería un curso aparte, en este tema realizamos una aproximación a los <b>mediaqueries</b>, para dejar un camino abierto para todos aquellos que quieran seguir este camino imprescindible en cualquier web actualmente.</div>
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t20_mediaqueries.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ac31.html">
+	<img src="img_html/palet3.png">
+	<div class="titulo"><b>Actividad</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="autoevaluacion31.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+
+<div class="cuadro"><a href="ex31.html">
+	<img src="img_html/palet4.png">
+	<div class="titulo"><b>Solucionador</b></div>
+</a></div>
+</article>
+</div>
+
+
+<div class="bloque" id="punto27">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 27: Contenido editable</h2>
+</div><div class="explicacion">
+Aunque pueda parecer difícil de aplicar a un proyecto real, el contenido editable que vamos a ver en este tema sorprende por su simplicidad y enorme proyección real, sobre todo si lo combinamos con javaScript. El contenido editable permite que el usuario pueda escribir en un <span class="azul negrita">&lt;div&gt;</span> o en zonas concretas de un texto guardando el formato que posee y sin necesidad de incorporar elementos de formulario.</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t2_editable.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</a></div>
+
+<div class="cuadro_vacio"></div>
+
+
+<div class="cuadro"><a href="autoevaluacion32.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+<div class="cuadro_vacio"></div>
+</article>
+</div>
+
+
+
+<div class="bloque" id="punto18">
+<div id="titulillo">
+<div class="arribal"><img src="img_html/flecha_arriba.png"></div>
+<h2>Tema 28: Guardar datos locales (Storage)</h2>
+</div><div class="explicacion">
+En este tema vamos a ver cómo la función de Storage deja atrás con alevosía y nocturnidad asombrosa las lastrosas cookies. Esta función permite guardar hasta 5 Mb. de información en el navegador local del usuario con una vigencia dentro de la misma sesión (<span class="azul negrita">sessionStorage</span>) o de manera permanente (<span class="azul negrita">localStorage</span>).</div>
+
+<article class="dos_columnas">
+
+<div class="cuadro"><a href="t19_storage.html">
+	<img src="img_html/palet2.png">
+	<div class="titulo"><b>Contenidos</b></div>
+</div></a>
+
+<div class="cuadro_vacio">
+</div>
+
+
+<div class="cuadro"><a href="autoevaluacion23.html">
+	<img src="img_html/palet1.png">
+	<div class="titulo" id="titulo1"><b>Autoevaluación</b></div>
+</a></div>
+
+<div class="cuadro_vacio">
+</div>
+</article>
+</div>
+</section>
+
+<footer>
+	<div id="texto_footer"><br>&#169; Javier López (2015-2019)<br>
+		<a href="mailto:jab@jabmultimedia.com"> <img src="img_html/email.png" align="center"> jab@jabmultimedia.com</a></li>
+		HTML6.es / JAB Multimedia, S.L.
+		<a href="#"><div id="flecha_azul"><img src="img_html/flecha_fondo.png"></div></a>
+	</div>
+</footer>
+<script type="text/javascript" src="js/busqueda.js"></script>
+</body>
+</html>

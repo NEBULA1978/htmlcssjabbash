@@ -1,0 +1,7 @@
+	<title>HTML6 (HTML5 y CSS3)</title>
+	<meta name="description" content="Curso completo 2019 desde cero, en español y en abierto de HTML5, CSS3 y javaScript (ECMAScript 6+)"/>
+		<div id="titular"><h1>HTML5 y CSS3</h1></div>
+	<div class="linea"><li><a id="p1" class="pps" href="#">Tema 1: Estructura semántica de HTML5</a></li></div>
+<h2>Tema 1: Estructura semántica de HTML5</h2>
+Se tratan los nuevos &lt;divs&gt; o cajas de HTML5 que aportan un significado propio a su contenido:
+Los formularios de HTML5 (<span class="azul negrita">&lt;form&gt;</span>) incorporan nuevos tipos de datos (<span class="azul negrita">&lt;input<&gt;</span>) (fechas, colores, direcciones de correo electrónico, rangos, etc..) y la autovalidación de datos sin javaScript. Al mismo tiempo vamos a ver todas las propiedades y eventos CSS3 (como <span class="azul negrita">[required]</span> o <span class="azul negrita">:invalid</span>) que permiten configurar cualquier elemento o respuesta de autovalidación de un formulario.</div>
